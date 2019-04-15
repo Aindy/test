@@ -10,5 +10,6 @@
     "strict" : false,
     "browser": true,
     "jquery" : true,
+    "devel" : true,
     "esversion" : 6
 }
