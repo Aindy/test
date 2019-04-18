@@ -1,5 +1,3 @@
-let myArr = ['Usman', 'Rukiyat', 'Adlan', 'Aindi'];
+let box = document.getElementById('box');
 
-myArr.forEach(function(item, i) {
-    console.log(i + ': ' + item);
-});
+console.log(box);
