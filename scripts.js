@@ -69,4 +69,4 @@ let appData = {
         appData.income.sort();
     }
 
-}
+};
