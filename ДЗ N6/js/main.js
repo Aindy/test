@@ -1,7 +1,7 @@
 let startBtn = document.getElementById('start'),
     budgetValue = document.getElementsByClassName('budget-value') [0],
     dayBudgetValue = document.getElementsByClassName('daybudget-value')[0],
-    levelValue = document.getElementsByClassName('expenses-value')[0],
+    levelValue = document.getElementsByClassName('level-value')[0],
     expensesValue = document.getElementsByClassName('expenses-value')[0],
     optionalExpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
     incomeValue = document.getElementsByClassName('income-value')[0],
@@ -24,14 +24,13 @@ let startBtn = document.getElementById('start'),
     
 
 
-    let money, time;
-
+    let money, time, sum = 0;
 
 
 startBtn.addEventListener('click', function(){
     time = prompt("Введите дату в формате YYYY-MM-DD");
     money = +prompt("Ваш бюджет на месяц?");
-
+    weStarted();
     while(isNaN(money) || money == "" || money == null){
         money = prompt("Ваш бюджет на месяц?");
     }
@@ -43,15 +42,17 @@ startBtn.addEventListener('click', function(){
     dayValue.value = new Date(Date.parse(time)).getDate();
 });
 
+
+function weStarted(){
+
 expensesBtn.addEventListener('click', function(){
-    let sum = 0;
    
     for(let i = 0; i < expensesItem.length; i++){
         let a = expensesItem[i].value,
             b = expensesItem[++i].value;
          
             if((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != ''){
-                console.log("done");
+                console.log("done enter expenses");
                 appData.expenses[a] = b;
                 sum += +b;
             }else{
@@ -73,7 +74,7 @@ optionalExpensesBtn.addEventListener('click', function(){
 countBtn.addEventListener('click', function(){
 
     if (appData.budget != undefined){
-    appData.moneyPerDay = (appData.budget / 30).toFixed();
+    appData.moneyPerDay = ((appData.budget - sum) / 30).toFixed();
     dayBudgetValue.textContent = appData.moneyPerDay;
 
     if(appData.moneyPerDay < 100){
@@ -88,6 +89,7 @@ countBtn.addEventListener('click', function(){
 }else{
     dayBudgetValue.textContent = 'Произошла ошибка';
 }
+
 });
 
 incomeItem.addEventListener('input', function(){
@@ -127,6 +129,7 @@ percentValue.addEventListener('input', function(){
             yearSavingValue.textContent = appData.yearIncome.toFixed(1);
     }
 });
+}
 
 let appData = {
     budget: money,
