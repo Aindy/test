@@ -1,0 +1,218 @@
+.logo {
+    height: 30px;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.logo_text {
+    margin-top: -8px;
+}
+.logo_text sup {
+    font-size: 58%;
+}
+.page-header {
+    margin-top: 25px;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 400px;
+}
+
+.map_projects {
+    width: 20%;
+    height: 500px;
+}
+
+.uList ul li {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.cow {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 13px;
+    top: -2px;
+}
+.hammer {
+    position: relative;
+    left: 15px;
+    top: -2px;
+}
+.bottle {
+    width: 45px;
+    height: 37px;
+    position: relative;
+    left: 5px;
+    top: -2px;
+}
+
+.img_padding {
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 0px;
+}
+
+.service_padding {
+    margin-top: 20px;
+}
+.service_padding1 {
+    margin-top: 10px;
+}
+
+.act {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.grey {
+    color: #999999;
+}
+a {
+    color: #449d44;
+}
+a:focus,
+a:hover {
+    color: #5cb85c;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: #5cb85c;
+}
+.btn-success {
+    background-color: #449d44;
+}
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:hover {
+    background-color: #5cb85c;
+}
+.btn-link {
+    color: #449d44;
+}
+.btn-link:hover,
+.btn-link:focus {
+    color: #5cb85c;
+}
+
+.footerCompany {
+    float: right;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+/***************** Media 991  ****************/
+@media(max-width:991px) {
+
+    body {
+        font-size: 13px;
+    }
+    .h2, h2 {
+        font-size: 25px;
+    }
+    .navbar-brand{
+        font-size: 14px;
+    }
+    .navbar-nav > li > a{
+        font-size: 11px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .logo_text {
+        margin-top: -6px;
+    }
+    sup {
+        top: -1em;
+    }
+    ul.dropdown-menu {
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+    .uList ul li {
+        line-height: 1.5;
+    }
+    .service_padding1 {
+        margin-top: 7px;
+    }
+    .service_padding {
+        margin-top: 10px;
+    }
+    .cow {
+        left: 11px;
+    }
+    .bottle {
+        width: 43px;
+        height: 35px;
+        left: 4px;
+        top: -4px;
+    }
+}
+
+/***************** Media 767  ******************/
+@media(max-width:767px) {
+    body {
+        font-size: 13px;
+    }
+    .h1, h1 {
+        font-size: 30px;
+    }
+    .h3, h3 {
+        font-size: 20px;
+    }
+    .navbar-brand{
+        font-size: 13px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .navbar-left {
+        float: left;
+        padding-left: 15px;
+    }
+    .logo {
+        height: 25px;
+        margin-top: 13px;
+        padding-right: 0;
+    }
+    .logo_text {
+        margin-top: -6px;
+        font-size: 14px;
+    }
+    sup {
+        top: -1.1em;
+    }
+
+    .img_padding {
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+
+    .uList ul li {
+        line-height: 1.5;
+    }
+    .service_padding {
+        margin-top: 15px;
+    }
+    .apply_margin {
+        margin-top: 15px;
+    }
+    .apply_margin2 {
+        margin-top: 8px;
+    }
+
+    .footerCompany {
+        padding-top: 20px;
+        float: left;
+    }
+}
